@@ -9,6 +9,8 @@
 # If you would like to clear your cache, go ahead and do a
 # "zsh-pip-clear-cache".
 
+[[ ! -x pip && -x pip3 ]] && alias pip="pip3"
+
 if [[ -d "${XDG_CACHE_HOME:-$HOME/.cache}/pip" ]]; then
   ZSH_PIP_CACHE_FILE="${XDG_CACHE_HOME:-$HOME/.cache}/pip/zsh-cache"
 else
